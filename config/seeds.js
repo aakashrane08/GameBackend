@@ -3,7 +3,7 @@ const Games = require("../models/Games");
 require("dotenv").config();
 
 mongoose
-  .connect("mongodb+srv://arane:54Lqi74Npywh8w5X@cluster0.bsjdty5.mongodb.net/Game")
+  .connect(process.env.MONGO_URL)
   .then(() => {
     console.log("game seeds opened");
   })
